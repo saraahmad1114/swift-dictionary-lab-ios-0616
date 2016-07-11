@@ -14,21 +14,23 @@
  */
 // write your code here
 
-
+var stateDictionary = [ "New York" : "Albany",
+                        "Ohio" : "Columbus",
+                        "Florida" : "Tallahassee",
+                        "Georgia" : "Atlanta",
+                        "Kentucky" : "Frankfort"
+                        ]
 
 
 /*: question2
  ### 2. What is the type of the dictionary you created in Question 1?
  */
-
-
-
-
+//the dictionary is of string type since both key and value are of string type
 /*: question3
  ### 3. Create a variable called `capital` and assign to it Florida's capital from the dictionary.
  */
 // write your code here
-
+var capital = stateDictionary["Florida"]
 
 
 
@@ -36,7 +38,9 @@
  ### 4. Unwrap `capital` and print out the message "The capital of Florida is <Capital>" to the console.
  */
 // write your code here
-
+if let capital = capital {
+    print("The capital of Florida is \(capital)")
+}
 
 
 
@@ -44,8 +48,8 @@
  ### 5. Create a variable called `anotherCapital` and assign to it the value of Pennsylvania's capital from the dictionary.
  */
 // write your code here
-
-
+//stateDictionary["Pennsylvania"] = "Harrisburg"
+var anotherCapital = stateDictionary["Pennsylvania"]
 
 
 /*: question6
@@ -53,14 +57,19 @@
  */
 // write your code here
 
-
+if let anotherCapital = anotherCapital {
+    print("\(anotherCapital )")
+}
+else {
+    print("I don't know Pennsylvania's Capital")
+}
 
 
 /*: question7
  ### 7. Pennsylvania's capital is Harrisburg. Add it to your state capitals dictionary.
  */
 // write your code here
-
+stateDictionary["Pennsylvania"] = "Harrisburg"
 
 
 
@@ -68,7 +77,10 @@
  ### 8. Retrieve Pennsylvania's capital from your dictionary. Unwrap it and print the message "Pennsylvania's capital is <Capital>" to the console.
  */
 // write your code here
-
+if let capital = stateDictionary["Pennsylvania"]
+{
+    print("Pennsylvania's capital is \(capital)")
+}
 
 
 
@@ -76,7 +88,7 @@
  ### 9. We don't really care about Pennsylvania's capital. Delete it from the dictionary. Print your dictionary to the console to ensure it's gone.
  */
 // write your code here
-
+stateDictionary["Pennsylvania"] = nil
 
 
 
@@ -85,7 +97,10 @@
  */
 let state = "New York"
 // write your code here
-
+if let state = stateDictionary["New York"]
+{
+    print("The capital of New York is \(state)")
+}
 
 
 
@@ -101,13 +116,17 @@ let state = "New York"
  */
 // write your code here
 
-
+var greatestBands = ["Nirvana" : ["Kurt Cobain", "Krist Novoselic", "Dave Grohl"],
+                     "The Beatles" : ["John Lennon", "George Harrison", "Paul McCartney", "Ringo Starr"],
+                     "The Breeders" : ["Kim Deal", "Kelley Deal", "Josephine Wiggs", "Jim Macpherson"],
+                     "Pixies" : ["Frank Black", "Frank Black", "Kim Deal", "David Lovering"]
+                    ]
 
 
 /*: question12
  ### 12. What is the type of the dictionary you created in Question 11?
  */
-
+//it is a string type of dictionary or : greatestBands = [String: String]
 
 
 
@@ -116,8 +135,12 @@ let state = "New York"
  */
 let bandName = "Pixies"
 // write your code here
+greatestBands[bandName]
 
-
+if let bandName = greatestBands[bandName] 
+{
+    print("\(bandName)")
+}
 
 
 /*:
